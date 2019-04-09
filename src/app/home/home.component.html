@@ -1,0 +1,36 @@
+<mat-drawer-container class="sider-container" autosize>
+  <mat-drawer #drawer  mode="side">
+      <button (click)="Editar()"  mat-raised-button>
+          Editar
+        </button>
+        <button (click)="Cerrar()" mat-raised-button>
+            Cerrar Sesión
+          </button>
+  </mat-drawer>
+
+  <button type="button" mat-button (click)="drawer.toggle()">
+    Perfil
+  </button>
+</mat-drawer-container>
+
+<div align="center" class="back">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Nombre: {{ name }}</mat-card-title>
+      <mat-card-subtitle>Edad: {{ age }} </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ picture }}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <mat-spinner *ngIf="loading"></mat-spinner>
+      <p>
+        Ubicación: {{ location }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="makeRequest(1)" mat-mini-fab color="warn">X</button>
+      <button (click)="makeRequest(2)" mat-mini-fab color="primary">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

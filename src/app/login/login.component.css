@@ -1,0 +1,60 @@
+.card {
+  max-width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-form {
+  margin: auto;
+  min-width: 150px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.mat-card {
+  background: #c218366e;
+  color: #fff;
+  height: 100%;
+}
+
+/* unvisited link */
+
+.label {
+  text-decoration: underline;
+  color: royalblue;
+}
+
+/* visited link */
+
+.label:visited {
+  text-decoration: underline;
+  color: black;
+}
+
+/* mouse over link */
+
+.label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: purple;
+}
+
+/* selected link */
+
+.label:active {
+  text-decoration: underline;
+  color: firebrick;
+}
+

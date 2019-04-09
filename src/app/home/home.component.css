@@ -1,0 +1,31 @@
+.example-card {
+  max-width: 400px;
+}
+
+.mat-card {
+  background: #ff2c2c;
+  color: #fff;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.back {
+  background-image: url("https://love.planetfem.com/wp-content/uploads/2015/11/Dollarphotoclub_76286710-e1423206683651.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.sider-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.sider-sidenav-content {
+  display: flex;
+}
+
+.sider-sidenav {
+  padding: 20px;
+}

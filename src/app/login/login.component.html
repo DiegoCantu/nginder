@@ -1,0 +1,53 @@
+<mat-card color="primary">
+  <br>
+  <br>
+  <mat-card-content>
+    <mat-card class="card" color="primary">
+        <mat-card-header>
+            <mat-card-title>{{ title }}</mat-card-title>
+          </mat-card-header>
+      <mat-card-content>
+        <img src="https://www.cybersmile.org/wp-content/uploads/tinder-flame-crop-101-200x200.png" />
+      </mat-card-content>
+    </mat-card>
+    <br>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" [formControl]="emailFormControl"  [(ngModel)]="email" >
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" [formControl]="passwordFormControl" [(ngModel)]="pass" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <br>
+      <div align="right">
+        <button mat-raised-button color="primary" (click)="action(title)"> {{title}} </button>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div align="center">
+        <div>
+          <label align="left" class="label" routerLink="/Login" routerLinkActive="active">Iniciar Sesión |</label>
+          <label align="left" class="label" routerLink="/Register" routerLinkActive="active">Registrarse |</label>
+          <label align="right" class="label" routerLink="/PasswordRecovery" routerLinkActive="active">Olvido contraseña</label>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
